@@ -8,7 +8,7 @@ class SStack():             #基于顺序表技术实现的栈类
         
     def top(self):
         if self._elems == []:
-            raise raise StackUnderflow("in SStack.top()")
+            raise StackUnderflow("in SStack.top()")
         return self._elems[-1]
         
     def push(self, elem):
@@ -21,3 +21,10 @@ class SStack():             #基于顺序表技术实现的栈类
            
 class StackUnderflow(ValueError): #栈下溢（空栈访问）
                 pass
+                
+                
+st1 = SStack()
+st1.push(3)
+st1.push(5)
+while not st1.is_empty():
+    print(st1.pop())
